@@ -1,0 +1,200 @@
+body {
+  background-image: linear-gradient(to right, lightblue, pink);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 0.4fr 0.4fr 6fr;
+  font-family: sans-serif;
+}
+
+.header {
+  grid-area: 1/2/2/3;
+}
+
+.logo {
+  margin-top: -30px;
+}
+.logo img {
+  float: right;
+  width: 40px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.logo p {
+  position: relative;
+  float: right;
+  font-size: 10px;
+}
+
+.header input[type="text"] {
+  float: left;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-left: 5%;
+  font-size: 17px;
+  border-radius: 8px;
+}
+.header button {
+  padding: 6px;
+  margin-top: 8px;
+  border-radius: 8px;
+  background: transparent;
+  position: absolute;
+}
+
+.sidebar {
+  background: rgba(221, 229, 232, 0.7);
+  grid-area: 1/1/5/2;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.wrapper {
+  transition: all 0.5s ease;
+}
+.wrapper .sidemenu .profile {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.wrapper .sidemenu .profile img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.wrapper .sidemenu .profile h3 {
+  color: #ffffff;
+  margin: 10px 0 5px;
+}
+
+.wrapper .sidemenu .profile p {
+  color: red;
+  font-size: 14px;
+}
+
+.wrapper .sidemenu ul li a {
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid rgba(221, 229, 232, 0.8);
+  color: white;
+  font-size: 16px;
+  position: relative;
+  text-decoration: none;
+}
+.wrapper .sidemenu ul {
+  list-style-type: none;
+  margin-left: -60px;
+}
+.wrapper .sidemenu ul li a:hover {
+  color: pink;
+  background: white;
+  border-right: 2px solid rgba(221, 229, 232, 0.6);
+}
+
+.wrapper .sidemenu ul li a:hover .icon,
+.wrapper .sidemenu ul li a.active .icon {
+  color: whitesmoke;
+}
+
+.wrapper .sidemenu ul li a:hover:before,
+.wrapper .sidemenu ul li a.active:before {
+  display: block;
+}
+.wrapper .section {
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  transition: all 0.5s ease;
+}
+.Titlebar {
+  grid-area: 2/2/3/3;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+/* CSS */
+.button-51 {
+  background-color: transparent;
+  border: 1px solid #266db6;
+  box-sizing: border-box;
+  color: #00132c;
+  font-family: "Avenir Next LT W01 Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  position: relative;
+  text-decoration: none;
+  display: flexbox;
+  margin: 9%;
+  margin-top: 0%;
+}
+
+.button-51:hover,
+.button-51:active {
+  outline: 0;
+}
+
+.button-51:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-51:before {
+  background-color: #d5edf6;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.button-51:hover:before {
+  background-color: #6dcff6;
+}
+
+@media (min-width: 768px) {
+  .button-51 {
+    padding: 16px 32px;
+  }
+
+  .article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-left: 15px;
+  }
+
+  .article p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: rgba(221, 229, 232, 0.4);
+    text-align: left;
+  }
+
+  .article .card {
+    background-color: rgba(221, 229, 232, 0.4);
+    color: black;
+    text-align: center;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .card p {
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .card .title {
+    font-size: 18px;
+    text-align: center;
+  }
+}
